@@ -1,7 +1,94 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import ProjectCard from '../components/ProjectCard';
+
 
 export default function projects() {
+  const [currentProjectClick, setCurrentProjectClick] = useState(false);
+  const [pastProjectsClick, setPastProjectsClick] = useState(false);
+
   return (
-    <div>projects</div>
+    <div className='flex flex-1 flex-wrap justify-evenly'>
+      <div className='flex flex-col'>
+         <button className='bee-text text-2xl font-bold hover:bg-yellow-500' onClick={()=> {
+            if(!currentProjectClick){
+              setCurrentProjectClick(true)
+              setPastProjectsClick(false)
+            }else {
+              setCurrentProjectClick(false)
+            }} 
+        }> Current Projects</button>
+
+      {currentProjectClick && 
+          <div className='flex'>
+            <ol>
+                Journal application that uses:
+                <li> <i className="fa-brands fa-react p-2"/> React's Next.js to handle routes and state</li>
+                <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css for a beautiful, responsive UI</li>
+                <li> <i className="fa-sharp fa-solid fa-database p-2"/> Firebase's firestore to persist data</li>
+                <li> Project code: <a href="https://github.com/caridadrivera/nextJs_tailwind_journal" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-2xl p-8" alt="github-link"></i>
+                    </a> 
+                </li>
+            </ol>
+           
+          </div>}
+      </div>
+
+      
+     
+   <div className='flex flex-col'>
+      <button onClick={()=> { 
+        if(!pastProjectsClick){
+          setPastProjectsClick(true)
+          setCurrentProjectClick(false)
+        }else {
+          setPastProjectsClick(false)
+        }}} 
+          className='bee-text text-2xl font-bold hover:bg-yellow-500'>Past Projects</button>
+          {pastProjectsClick && 
+          <div className='flex'>
+             <ol>
+                <li> <i className="fa-brands fa-react p-2"/> React.js Movie Search with external API
+                     <a href="https://github.com/caridadrivera/react-movie-search" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
+
+                      <a href="https://www.youtube.com/watch?v=Otcgs3BfJnA" target="_blank">
+                      <i class="fa-brands fa-youtube fa-lg pl-4"></i></a>
+                </li>
+
+
+                <li> <i className="fa-regular fa-gem p-2 "/> Mindful Ruby on Rails and Postgres SQL
+                     <a href="https://github.com/caridadrivera/mindful-rails-app" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
+
+                      <a href="https://www.youtube.com/watch?v=rAKMoulJ7NQ" target="_blank">
+                      <i class="fa-brands fa-youtube fa-lg pl-4"></i></a>
+                </li>
+
+                <li> <i class="fa-brands fa-js p-2"/> Tile-matching Javascript and Rails App
+                     <a href="https://github.com/caridadrivera/tile-matching-game-JS" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
+
+                      <a href="https://www.youtube.com/watch?v=98ledb3KwcI" target="_blank">
+                      <i class="fa-brands fa-youtube fa-lg pl-4"></i></a>
+                </li>
+
+                <li> <i className="fa-brands fa-react p-2"/> React.js Tic Tac Toe game
+                     <a href="https://github.com/caridadrivera/React-tic-tac-toe" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a>    
+                </li>
+
+                <li> <i className="fa-brands fa-react p-2"/> Old Portfolio Website
+                     <a href="https://github.com/caridadrivera/portfolio-rivera" target="_blank"> 
+                      <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a>    
+                </li>
+
+                
+
+             </ol>
+          </div>}
+     </div>
+
+    </div>
   )
 }

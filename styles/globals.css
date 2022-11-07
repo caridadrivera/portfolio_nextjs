@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+
+.bee-text{
+  
+    font-family: 'ABeeZee';
+  }
+
 .hex {
     margin: 0 auto;
     position: relative;
