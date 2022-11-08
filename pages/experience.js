@@ -12,7 +12,7 @@ export default function experience() {
                 <span className='text-sm italic'> January 2021 - October 2022</span>               
                <ol className='list-disc pl-5 pb-5'>
                  <li> Worked Directly with Chief of Technology to build backend platform support using C# and SQL </li>
-                 <li> Built Angular.js Class Controllers to manipulate data and user interaction with the HTML and Bootstrap View </li>
+                 <li> Built new UI features and updated existing ones with Angular.js, HTML and Bootstrap.css</li>
                  <li> Debugged APIs and loading performance issues using Google Developer Tools and Visual Studio Code Debugger</li>
                </ol>
             </div>
