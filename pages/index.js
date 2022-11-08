@@ -10,14 +10,14 @@ export default function Home() {
         <div className='hex-background'>
             <Image 
                 src={myPic} 
-                alt="my profile picture"
+                alt=""
             />
         </div>
       </div>
-      <h1 className=' text-3xl ml-8 text-white '> 
+      <h1 className=' text-3xl ml-8 font-extrabold  text-slate-500  '> 
         Caridad Rivera
       </h1>
-      <span className='m-8 text-slate-500 bold'>
+      <span className='m-8 text-slate-500  font-bold'>
         Software Engineer, critical thinker, fast-learner.
       </span>
       

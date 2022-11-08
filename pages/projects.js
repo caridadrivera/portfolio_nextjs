@@ -1,22 +1,26 @@
 import React, {useState, useEffect} from 'react'
-import ProjectCard from '../components/ProjectCard';
 
 
 export default function projects() {
   const [currentProjectClick, setCurrentProjectClick] = useState(false);
   const [pastProjectsClick, setPastProjectsClick] = useState(false);
 
+  useEffect(()=>{
+    setCurrentProjectClick(true);
+  }, [])
+
   return (
-    <div className='flex flex-1 flex-wrap justify-evenly'>
+    <div className='flex flex-1 flex-wrap justify-evenly p-8 m-8'>
       <div className='flex flex-col'>
-         <button className='bee-text text-2xl font-bold hover:bg-yellow-500' onClick={()=> {
+         <button className='bee-text text-2xl font-bold bg-white hover:bg-yellow-300 border-4 rounded' 
+          onClick={()=> {
             if(!currentProjectClick){
               setCurrentProjectClick(true)
               setPastProjectsClick(false)
             }else {
               setCurrentProjectClick(false)
             }} 
-        }> Current Projects</button>
+        }> My Current Projects</button>
 
       {currentProjectClick && 
           <div className='flex'>
@@ -37,18 +41,21 @@ export default function projects() {
       
      
    <div className='flex flex-col'>
-      <button onClick={()=> { 
-        if(!pastProjectsClick){
-          setPastProjectsClick(true)
-          setCurrentProjectClick(false)
-        }else {
-          setPastProjectsClick(false)
-        }}} 
-          className='bee-text text-2xl font-bold hover:bg-yellow-500'>Past Projects</button>
-          {pastProjectsClick && 
+      <button className='bee-text text-2xl  border-4 bg-white hover:bg-yellow-300 rounded' onClick={()=> { 
+          if(!pastProjectsClick){
+            setPastProjectsClick(true)
+            setCurrentProjectClick(false)
+          } else {
+            setPastProjectsClick(false)
+          }}} 
+          > My Past Projects
+      </button>
+
+      {pastProjectsClick && 
           <div className='flex'>
              <ol>
-                <li> <i className="fa-brands fa-react p-2"/> React.js Movie Search with external API
+                <li className='flex justify-evenly'> 
+                  <i className="fa-brands fa-react p-2"/> React.js Movie Search with external API
                      <a href="https://github.com/caridadrivera/react-movie-search" target="_blank"> 
                       <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
 
@@ -57,7 +64,8 @@ export default function projects() {
                 </li>
 
 
-                <li> <i className="fa-regular fa-gem p-2 "/> Mindful Ruby on Rails and Postgres SQL
+                <li className='flex justify-evenly'> 
+                  <i className="fa-regular fa-gem p-2 "/> Mindful Ruby on Rails and Postgres SQL
                      <a href="https://github.com/caridadrivera/mindful-rails-app" target="_blank"> 
                       <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
 
@@ -65,7 +73,8 @@ export default function projects() {
                       <i class="fa-brands fa-youtube fa-lg pl-4"></i></a>
                 </li>
 
-                <li> <i class="fa-brands fa-js p-2"/> Tile-matching Javascript and Rails App
+                <li className='flex justify-evenly'> 
+                  <i class="fa-brands fa-js p-2"/> Tile-matching Javascript and Rails App
                      <a href="https://github.com/caridadrivera/tile-matching-game-JS" target="_blank"> 
                       <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a> 
 
@@ -73,12 +82,14 @@ export default function projects() {
                       <i class="fa-brands fa-youtube fa-lg pl-4"></i></a>
                 </li>
 
-                <li> <i className="fa-brands fa-react p-2"/> React.js Tic Tac Toe game
+                <li className='flex'>
+                   <i className="fa-brands fa-react p-2"/> React.js Tic Tac Toe game
                      <a href="https://github.com/caridadrivera/React-tic-tac-toe" target="_blank"> 
                       <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a>    
                 </li>
 
-                <li> <i className="fa-brands fa-react p-2"/> Old Portfolio Website
+                <li className='flex'> 
+                  <i className="fa-brands fa-react p-2"/> Old Portfolio Website
                      <a href="https://github.com/caridadrivera/portfolio-rivera" target="_blank"> 
                       <i className="fa-brands fa-square-github fa-lg pl-4" alt="github-link"></i></a>    
                 </li>

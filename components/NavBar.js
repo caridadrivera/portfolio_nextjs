@@ -10,7 +10,7 @@ export default function NavBar() {
     const inactiveLinkStyle = "text-slate-400 hover:text-white"
 
   return (
-    <div className='flex flex-1 p-8 text-3xl font-bold text-white hover:bg-yellow-500'>
+    <div className='flex flex-1 p-8 text-3xl font-bold text-white hover:bg-yellow-300' alt="navigation">
         <ul>      
             <li>
                 <Link href="/" 
@@ -35,11 +35,7 @@ export default function NavBar() {
                     Projects
                </Link>
             </li>
-            <li>
-                <Link href="/contact" className={router.pathname == "/contact" ? activeLinkStyle : inactiveLinkStyle}>
-                    Contact
-               </Link>
-            </li>
+    
         </ul>
     </div>
   )
