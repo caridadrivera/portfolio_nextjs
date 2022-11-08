@@ -4,10 +4,11 @@ export default function experience() {
   return (
     
     <div className='flex flex-1 ml-8 p-5 text-md text-bold justify-evenly'>
-      <div className='flex-col '>
+      
+      <div className='flex-col ml-8'>
         <span className='bee-text text-2xl'>Work && Volunteer </span>
             <div className='p-4'>
-                <span>Partnership To End Addiction</span> 
+                <span> Fullstack Software Developer @ Partnership To End Addiction</span> 
                 <span className='text-sm italic'> January 2021 - October 2022</span>               
                <ol className='list-disc pl-5 pb-5'>
                  <li> Worked Directly with Chief of Technology to build backend platform support using C# and SQL </li>
@@ -17,7 +18,7 @@ export default function experience() {
             </div>
 
             <div className='p-4'>
-              <span> Ladder Labs</span> 
+              <span> Frontend Developer @ Ladder Labs</span> 
                 <span className='text-sm italic'> August 2020 - June 2021</span>               
                <ol className='list-disc pl-5 pb-5'>
                  <li> Contributed to front-end design of a single-page coupon application using React.js and Bootstrap CSS </li>
