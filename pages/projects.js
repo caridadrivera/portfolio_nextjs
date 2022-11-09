@@ -2,18 +2,16 @@ import React, {useState, useEffect} from 'react'
 
 
 export default function projects() {
-  const [currentProjectClick, setCurrentProjectClick] = useState(false);
-  const [pastProjectsClick, setPastProjectsClick] = useState(false);
+  const [currentProjectClick, setCurrentProjectClick] = useState(false)
+  const [pastProjectsClick, setPastProjectsClick] = useState(false)
 
-  useEffect(()=>{
-    setCurrentProjectClick(true);
-  }, [])
+  
+ 
 
   return (
-    <div className='flex flex-1 flex-wrap justify-evenly p-8 m-8'>
-       
-        <div className='flex flex-col'>
-         <button className='bee-text text-2xl font-bold bg-white hover:bg-yellow-300 border-4 rounded' 
+    <div className='flex flex-1 flex-wrap justify-evenly p-8 m-8 slideDown'>   
+      <div className='flex flex-col flow-root'>
+         <button className='bee-text text-2xl p-4 font-bold bg-white  hover:bg-yellow-300 border-4 rounded' 
           onClick={()=> {
             if(!currentProjectClick){
               setCurrentProjectClick(true)
@@ -21,12 +19,12 @@ export default function projects() {
             }else {
               setCurrentProjectClick(false)
             }} 
-        }> My Current Projects</button>
+        }> Current Projects</button>
 
         {currentProjectClick && 
             <div className='flex flex-col'>
-              <ol className='m-8'>
-                <li className='list-disc'> Journal application with:</li> 
+              <ol className='m-8 '>
+                <li className='list-disc '> Journal application with:</li> 
                   <li> <i className="fa-brands fa-react p-2"/> React's Next.js to handle user navigation routes and state</li>
                   <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css and some custom CSS for stylish and fully responsive UI </li>
                   <li> <i className="fa-sharp fa-solid fa-database p-2"/> Firebase's firestore to persist data</li>
@@ -48,14 +46,14 @@ export default function projects() {
 
           
     <div className='flex flex-col'>
-        <button className='bee-text text-2xl border-4 bg-white hover:bg-yellow-300 rounded' onClick={()=> { 
+        <button className='bee-text text-2xl border-4 p-4 bg-white hover:bg-yellow-300 rounded' onClick={()=> { 
             if(!pastProjectsClick){
               setPastProjectsClick(true)
               setCurrentProjectClick(false)
             } else {
               setPastProjectsClick(false)
             }}} 
-          > My Past Projects
+          > Past Projects
       </button>
 
       {pastProjectsClick && 

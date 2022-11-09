@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-fade{
+
+   animation: fadeInAnimation ease 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
 
 
 .bee-text{
@@ -31,3 +46,14 @@
     -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
     
 }
+
+.slideDown {
+    top:-40px;
+    left:5px;
+    animation: slideDown ease .5s forwards .2s;
+  }
+  @keyframes slideDown {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(40px);opacity:1;}
+  }
+  
