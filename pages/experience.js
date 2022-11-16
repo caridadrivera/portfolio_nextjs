@@ -3,7 +3,7 @@ import React from 'react'
 export default function experience() {
   return (
     
-   <div className='flex flex-1 ml-8 p-5 text-md  justify-evenly'>   
+   <div className='grid ml-8 p-5 text-md  justify-evenly'>   
       <div className='flex-col ml-8 text-fade animation ease 8s'>
         <span className='bee-text font-bold text-2xl'>Experience </span>
             <div className='p-4'>
