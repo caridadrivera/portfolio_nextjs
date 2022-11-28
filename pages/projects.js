@@ -9,8 +9,8 @@ export default function projects() {
  
 
   return (
-    <div className='flex w-screen h-screen slideDown'>   
-      <div className='flex flex-1 m-8'>
+    <div className='flex justify-center  w-screen h-screen slideDown'>   
+      <div className=' m-8'>
          <button className='rounded-full p-4 bee-text text-2xl border border-8 border-lime-500 hover:border-lime-700 hover:bg-lime-200' 
           onClick={()=> {
             if(!currentProjectClick){
@@ -34,7 +34,7 @@ export default function projects() {
                   </li>
 
                   <li className='list-disc'> This portfolio with: </li> 
-                  <li> <i className="fa-brands fa-react p-2"/> Next.js for seamless navigation between components, React.js to attain seamless user interaction </li>
+                  <li> <i className="fa-brands fa-react p-2"/> Next.js</li>
                   <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css for a easy, beautiful, and responsive UI</li>
                   <li className='p-2'> Project code: <a href="https://github.com/caridadrivera/portfolio_nextjs" target="_blank"> 
                         <i className="fa-brands fa-square-github fa-xl p-4" alt="github-link"></i>
@@ -45,7 +45,7 @@ export default function projects() {
         </div>
 
           
-    <div className='flex flex-1 m-8'>
+    <div className='m-8'>
         <button className='rounded-full bee-text p-4 text-2xl border-8 border-lime-500 hover:border-lime-700 hover:bg-lime-200' onClick={()=> { 
             if(!pastProjectsClick){
               setPastProjectsClick(true)

@@ -10,7 +10,7 @@ export default function NavBar() {
     const inactiveLinkStyle = "text-green-800 hover:text-white"
 
   return (
-    <nav className='flex text-2xl bg-green-500 p-4 sm:w-screen' alt="navigation">
+    <nav className='flex flex-1 text-2xl bg-green-500 p-4 sm:w-screen' alt="navigation">
         <ul className='flex space-x-4 '>      
             <li>
                 <Link href="/" 

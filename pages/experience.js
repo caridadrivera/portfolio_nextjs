@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function experience() {
   return (    
- <div className='flex text-md justify-evenly w-screen'> 
-    <div className='flex-col ml-8 text-fade animation ease 8s'>
+ <div className='flex text-md w-screen h-screen'> 
+    <div className='flex-col text-fade animation ease 8s'>
       <span className='bee-text font-bold text-2xl'>Tech Stach: </span>  
         <ol className='list-disc pl-5 pb-5'>
           <li> HTML, Tailwind.css, MaterialUI</li>
@@ -16,7 +16,7 @@ export default function experience() {
           <li> Visual Studio Code</li>
         </ol>
 
-        <div className='flex flex-1 flex-wrap p-8 m-8 justify-between text-fade animation ease 8s'> 
+        <div className='flex flex-1 flex-wrap p-8 justify-between text-fade animation ease 8s'> 
           <i className="fa-brands fa-html5 fa-6x "/>
           <i className="fa-brands fa-css3 fa-6x "/>
           <i className="fa-brands fa-js fa-6x text-fade"/>
