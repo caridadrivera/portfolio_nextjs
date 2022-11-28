@@ -6,7 +6,7 @@ export default function Layout(props) {
   return (
     <>
       <NavBar/>
-        <main className='flex justify-items-center '>{children}</main>
+        <main className='flex '>{children}</main>
     </>
   
   )

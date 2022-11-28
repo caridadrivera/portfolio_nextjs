@@ -6,11 +6,11 @@ import { useRouter } from 'next/router';
 export default function NavBar() {
  
     const router = useRouter()
-    const activeLinkStyle = "active:bg-amber-500" 
-    const inactiveLinkStyle = "text-slate-400 hover:text-white"
+    const activeLinkStyle = "bg-green-500" 
+    const inactiveLinkStyle = "text-green-800 hover:text-white"
 
   return (
-    <nav className='flex text-3xl font-bold text-white bg-yellow-300 ' alt="navigation">
+    <nav className='flex text-2xl bg-green-500 p-4 sm:w-screen' alt="navigation">
         <ul className='flex space-x-4 '>      
             <li>
                 <Link href="/" 

@@ -10,6 +10,10 @@
     font-family: 'ABeeZee';
   }
 
+.title-text{
+  font-family: 'Comfortaa';
+}
+
 .hexagon {
     margin: 0 auto;
     position: relative;
@@ -35,7 +39,6 @@
 
 
   .text-fade{
-
     animation: fadeInAnimation ease 4s;
      animation-iteration-count: 1;
      animation-fill-mode: forwards;

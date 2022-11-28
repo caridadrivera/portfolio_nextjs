@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function experience() {
   return (    
- <div className='flex text-md  justify-evenly'> 
+ <div className='flex text-md justify-evenly w-screen'> 
     <div className='flex-col ml-8 text-fade animation ease 8s'>
       <span className='bee-text font-bold text-2xl'>Tech Stach: </span>  
         <ol className='list-disc pl-5 pb-5'>

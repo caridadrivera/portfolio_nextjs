@@ -9,9 +9,9 @@ export default function projects() {
  
 
   return (
-    <div className='flex flex-1 flex-wrap justify-evenly p-8 m-8 slideDown'>   
-      <div className='flex flex-col flow-root'>
-         <button className='rounded-full p-4 bee-text text-2xl border' 
+    <div className='flex w-screen h-screen slideDown'>   
+      <div className='flex flex-1 m-8'>
+         <button className='rounded-full p-4 bee-text text-2xl border border-8 border-lime-500 hover:border-lime-700 hover:bg-lime-200' 
           onClick={()=> {
             if(!currentProjectClick){
               setCurrentProjectClick(true)
@@ -22,7 +22,7 @@ export default function projects() {
         }> Current Projects</button>
 
         {currentProjectClick && 
-            <div className='flex flex-col'>
+            <div className='flex'>
               <ol className='m-8 '>
                 <li className='list-disc '> Journal application with:</li> 
                   <li> <i className="fa-brands fa-react p-2"/> React's Next.js to handle user navigation routes and state</li>
@@ -45,8 +45,8 @@ export default function projects() {
         </div>
 
           
-    <div className='flex flex-col'>
-        <button className='rounded-full bee-text p-4 text-2xl border' onClick={()=> { 
+    <div className='flex flex-1 m-8'>
+        <button className='rounded-full bee-text p-4 text-2xl border-8 border-lime-500 hover:border-lime-700 hover:bg-lime-200' onClick={()=> { 
             if(!pastProjectsClick){
               setPastProjectsClick(true)
               setCurrentProjectClick(false)
@@ -56,56 +56,53 @@ export default function projects() {
           > Past Projects
       </button>
 
-      {pastProjectsClick && 
-          <div className='flex'>
-             <ol className='m-8'>
-                <li className='list-disc'>  React.js Movie Search with external API </li>
-                  <li className='p-2'> Project code && demo:  
-                        <a href="https://github.com/caridadrivera/react-movie-search"target="_blank"> 
-                        <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i>
-                      </a> 
+        {pastProjectsClick && 
+            <div className='flex'>
+              <ol className='m-8'>
+                  <li className='list-disc'>  React.js Movie Search with external API </li>
+                    <li className='p-2'> Project code && demo:  
+                          <a href="https://github.com/caridadrivera/react-movie-search"target="_blank"> 
+                          <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i>
+                        </a> 
 
-                      <a href="https://www.youtube.com/watch?v=Otcgs3BfJnA" target="_blank">
-                      <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
+                        <a href="https://www.youtube.com/watch?v=Otcgs3BfJnA" target="_blank">
+                        <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
+                    </li>
+
+
+                  <li className='list-disc'> Mindful Ruby on Rails and Postgres SQL</li>
+                    <li className='p-2'> Project code && demo:  
+                      <a href="https://github.com/caridadrivera/mindful-rails-app" target="_blank"> 
+                        <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a> 
+
+                        <a href="https://www.youtube.com/watch?v=rAKMoulJ7NQ" target="_blank">
+                        <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
                   </li>
 
+                  <li className='list-disc'>  Tile-matching Javascript and Rails App </li>
+                    <li className='p-2'> Project code && demo:  
+                      <a href="https://github.com/caridadrivera/tile-matching-game-JS" target="_blank"> 
+                        <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a> 
 
-                <li className='list-disc'> Mindful Ruby on Rails and Postgres SQL</li>
-                  <li className='p-2'> Project code && demo:  
-                     <a href="https://github.com/caridadrivera/mindful-rails-app" target="_blank"> 
-                      <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a> 
-
-                      <a href="https://www.youtube.com/watch?v=rAKMoulJ7NQ" target="_blank">
-                      <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
-                </li>
-
-                <li className='list-disc'>  Tile-matching Javascript and Rails App </li>
-                  <li className='p-2'> Project code && demo:  
-                     <a href="https://github.com/caridadrivera/tile-matching-game-JS" target="_blank"> 
-                      <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a> 
-
-                      <a href="https://www.youtube.com/watch?v=98ledb3KwcI" target="_blank">
-                      <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
-                </li>
-
-                <li className='list-disc'>  React.js Tic Tac Toe game</li>
-                   <li className='p-2'> Project code:  
-                     <a href="https://github.com/caridadrivera/React-tic-tac-toe" target="_blank"> 
-                      <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a>    
+                        <a href="https://www.youtube.com/watch?v=98ledb3KwcI" target="_blank">
+                        <i class="fa-brands fa-youtube fa-xl pl-4"></i></a>
                   </li>
 
-                <li className='list-disc'>  Old Portfolio Website</li>
-                  <li className='p-2'> Project code:  
-                     <a href="https://github.com/caridadrivera/portfolio-rivera" target="_blank"> 
-                      <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a>    
-                 </li>
+                  <li className='list-disc'>  React.js Tic Tac Toe game</li>
+                    <li className='p-2'> Project code:  
+                      <a href="https://github.com/caridadrivera/React-tic-tac-toe" target="_blank"> 
+                        <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a>    
+                    </li>
 
-                
+                  <li className='list-disc'>  Old Portfolio Website</li>
+                    <li className='p-2'> Project code:  
+                      <a href="https://github.com/caridadrivera/portfolio-rivera" target="_blank"> 
+                        <i className="fa-brands fa-square-github fa-xl pl-4" alt="github-link"></i></a>    
+                  </li>
 
-             </ol>
-          </div>}
+              </ol>
+            </div>}
      </div>
-
     </div>
   )
 }
