@@ -6,7 +6,7 @@ export default function Layout(props) {
   return (
     <>
       <NavBar/>
-        <main className='flex '>{children}</main>
+        <main className='flex'>{children}</main>
     </>
   
   )

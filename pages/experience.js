@@ -4,14 +4,14 @@ export default function experience() {
   return (    
  <div className='flex text-md w-screen h-screen'> 
     <div className='flex-col text-fade animation ease 8s'>
-      <span className='bee-text font-bold text-2xl'>Tech Stach: </span>  
-        <ol className='list-disc pl-5 pb-5'>
+      <span className='p-4 bee-text font-bold text-2xl'>Tech Stach: </span>  
+        <ol className='list-disc p-8'>
           <li> HTML, Tailwind.css, MaterialUI</li>
           <li> Javascript and some of it's frameworks and libraries like React.js, Angular.js and Next.js </li>
           <li> Building backend and API support with Ruby, Ruby on Rails and PostGres as well as C# and SQL </li>
         </ol>  
-      <span className='flex flex-1'> I also have experience debugging, API and UIs with:</span> 
-        <ol className='list-disc pl-5'>
+      <span className='m-2'> API and UI Debugging with:</span> 
+        <ol className='list-disc pl-8'>
           <li> Google Chrome Dev Tools</li>
           <li> Visual Studio Code</li>
         </ol>
