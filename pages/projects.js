@@ -11,7 +11,7 @@ export default function projects() {
   return (
     <div className='flex flex-1 flex-wrap justify-evenly p-8 m-8 slideDown'>   
       <div className='flex flex-col flow-root'>
-         <button className='bee-text text-2xl p-4 font-bold bg-white  hover:bg-yellow-300 border-4 rounded' 
+         <button className='rounded-full p-4 bee-text text-2xl border' 
           onClick={()=> {
             if(!currentProjectClick){
               setCurrentProjectClick(true)
@@ -46,7 +46,7 @@ export default function projects() {
 
           
     <div className='flex flex-col'>
-        <button className='bee-text text-2xl border-4 p-4 bg-white hover:bg-yellow-300 rounded' onClick={()=> { 
+        <button className='rounded-full bee-text p-4 text-2xl border' onClick={()=> { 
             if(!pastProjectsClick){
               setPastProjectsClick(true)
               setCurrentProjectClick(false)

@@ -1,11 +1,13 @@
 import React from 'react'
-
+import NavBar from './NavBar'
 
 export default function Layout(props) {
     const {children} = props
   return (
-    <div className='flex flex-col min-h-screen relative bg-amber-300 border border-8 border-white'> 
-        <main>{children}</main>
-    </div>
+    <>
+      <NavBar/>
+        <main className='flex justify-items-center '>{children}</main>
+    </>
+  
   )
 }

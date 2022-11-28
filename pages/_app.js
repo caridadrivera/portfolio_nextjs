@@ -7,7 +7,6 @@ function MyApp({ Component, pageProps }) {
 
   return  ( 
     <Layout>
-        <NavBar/>
         <Component {...pageProps} />
     </Layout>
     
