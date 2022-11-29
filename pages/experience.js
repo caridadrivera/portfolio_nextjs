@@ -7,7 +7,7 @@ export default function experience() {
   return (   
 
    <>
-    <Card sx={{ m:8 }} className="sm: m-8"  >
+    <Card sx={{ minWidth: 50 }} >
        <CardContent>
           <Typography variant="h5" component="div">
             Tech Stach:
@@ -40,7 +40,7 @@ export default function experience() {
     </Card> 
 
 
-    <Card sx={{ m:8 }} className="sm: m-8">
+    <Card sx={{ minWidth: 50 }} >
       <CardContent>
         <Typography variant="h5" component="div">
           Work:
