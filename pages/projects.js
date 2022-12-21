@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 export default function projects() {
   const [currentProjectClick, setCurrentProjectClick] = useState(false)
@@ -9,8 +10,8 @@ export default function projects() {
  
 
   return (
-    <div className='flex justify-center  w-screen h-screen slideDown'>   
-      <div className=' m-8'>
+    <div className='flex justify-center  w-screen slideDown'>   
+      <div className='m-8'>
          <button className='rounded-full p-4 bee-text text-2xl border border-8 border-lime-500 hover:border-lime-700 hover:bg-lime-200' 
           onClick={()=> {
             if(!currentProjectClick){
@@ -22,26 +23,31 @@ export default function projects() {
         }> Current Projects</button>
 
         {currentProjectClick && 
-            <div className='flex'>
-              <ol className='m-8 '>
-                <li className='list-disc '> Journal application with:</li> 
-                  <li> <i className="fa-brands fa-react p-2"/> React's Next.js to handle user navigation routes and state</li>
-                  <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css and some custom CSS for stylish and fully responsive UI </li>
-                  <li> <i className="fa-sharp fa-solid fa-database p-2"/> Firebase's firestore to persist data</li>
-                  <li className='p-2'> Project code: <a href="https://github.com/caridadrivera/nextJs_tailwind_journal" target="_blank"> 
-                        <i className="fa-brands fa-square-github fa-xl p-4" alt="github-link"></i>
-                      </a> 
-                  </li>
+         <Card>
+            <CardContent>
+              <div className='flex'>
+                <ol className='m-8 '>
+                  <li className='list-disc '> Journal application with:</li> 
+                    <li> <i className="fa-brands fa-react p-2"/> React's Next.js to handle user navigation routes and state</li>
+                    <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css and some custom CSS for stylish and fully responsive UI </li>
+                    <li> <i className="fa-sharp fa-solid fa-database p-2"/> Firebase's firestore to persist data</li>
+                    <li className='p-2'> Project code: <a href="https://github.com/caridadrivera/nextJs_tailwind_journal" target="_blank"> 
+                          <i className="fa-brands fa-square-github fa-xl p-4" alt="github-link"></i>
+                        </a> 
+                    </li>
 
-                  <li className='list-disc'> This portfolio with: </li> 
-                  <li> <i className="fa-brands fa-react p-2"/> Next.js</li>
-                  <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css for a easy, beautiful, and responsive UI</li>
-                  <li className='p-2'> Project code: <a href="https://github.com/caridadrivera/portfolio_nextjs" target="_blank"> 
-                        <i className="fa-brands fa-square-github fa-xl p-4" alt="github-link"></i>
-                      </a> 
-                  </li>
-              </ol>     
-            </div>}
+                    <li className='list-disc'> This portfolio with: </li> 
+                    <li> <i className="fa-brands fa-react p-2"/> Next.js</li>
+                    <li> <i className="fa-brands fa-css3 p-2"/> Tailwind.css for a easy, beautiful, and responsive UI</li>
+                    <li className='p-2'> Project code: <a href="https://github.com/caridadrivera/portfolio_nextjs" target="_blank"> 
+                          <i className="fa-brands fa-square-github fa-xl p-4" alt="github-link"></i>
+                        </a> 
+                    </li>
+                </ol>     
+              </div>
+            </CardContent>
+         </Card>
+         }
         </div>
 
           
@@ -57,6 +63,8 @@ export default function projects() {
       </button>
 
         {pastProjectsClick && 
+         <Card sx={{ minWidth: 50 }} >
+           <CardContent>
             <div className='flex'>
               <ol className='m-8'>
                   <li className='list-disc'>  React.js Movie Search with external API </li>
@@ -101,7 +109,10 @@ export default function projects() {
                   </li>
 
               </ol>
-            </div>}
+            </div>
+            </CardContent>
+          </Card>
+          }
      </div>
     </div>
   )
