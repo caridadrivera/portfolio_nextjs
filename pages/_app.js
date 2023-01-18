@@ -1,17 +1,12 @@
-import '../styles/globals.css'
-import Layout from  '../components/Layout'
-import NavBar from '../components/NavBar'
-
+import "../styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
-
-  return  ( 
-    <Layout>
-        <Component {...pageProps} />
-    </Layout>
-    
-   
-  )
+  return (
+    <ThemeProvider defaultTheme="light" attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

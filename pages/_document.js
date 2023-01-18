@@ -15,9 +15,11 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <NextScript />
+        <NextScript /> 
         <div id='portal'></div>
+        
       </body>
+
     </Html>
   )
 }

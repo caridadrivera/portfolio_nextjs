@@ -14,10 +14,13 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.10.16",
     "babel-plugin-macros": "^3.1.0",
+    "fullpage.js": "^4.0.15",
     "next": "latest",
+    "next-themes": "^0.2.1",
     "next.js": "^1.0.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-rough-notation": "^1.0.3"
   },
   "devDependencies": {
     "@testing-library/react": "^13.4.0",
