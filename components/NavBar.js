@@ -28,6 +28,7 @@ export default function NavBar() {
             </Link>
         </div> }
     
+
         <div className="space-x-8 hidden md:block">
           <Link
             href="/about"
