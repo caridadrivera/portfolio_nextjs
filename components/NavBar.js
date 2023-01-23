@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from "react";
+import FiMenu from 'react-icons/fi'
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import userData from "../constants/data"
 
 export default function NavBar() {
+
   const router = useRouter();
-  
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  
 
   useEffect(() => {
     setMounted(true);
+
+
   }, []);
+
 
   return (
     <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
-      <div className="flex  md:flex-row justify-between items-center">
-        { router.asPath !== "/" && <div className="flex flex-col">
+      <div className="flex  md:flex-row sm:flex-row justify-between items-center">
+    
+      {router.asPath !== "/" && 
+        <div className="flex flex-col">
             <Link href="/">
-             <h1 className="font-semibold text-xl dark:text-gray-100">
+             <h1 className="font-semibold text-xl  dark:text-gray-100">
                 {userData.name}
             </h1>
-             <p className="text-base font-light text-gray-500 dark:text-gray-300">
+             <p className="text-base font-light dark:text-gray-300">
                 {userData.designation}
              </p>
             </Link>
@@ -32,10 +39,10 @@ export default function NavBar() {
         <div className="space-x-8 hidden md:block">
           <Link
             href="/about"
-            className={`text-base  ${
+            className={`text-lg  ${
               router.asPath === "/about"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-gray-700 font-bold dark:text-gray-500"
+                : "text-gray-900 font-bold dark:text-gray-300 font-normal "
             }`}
           >
             About{" "}
@@ -57,10 +64,10 @@ export default function NavBar() {
           </Link>
           <Link
             href="/projects"
-            className={`text-base  ${
+            className={`text-lg  ${
               router.asPath === "/projects"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
+                ? "text-gray-900 font-bold dark:text-gray-500"
+                : "text-black- font-bold dark:text-gray-300 font-normal "
             }`}
           >
             Projects
@@ -82,9 +89,9 @@ export default function NavBar() {
           </Link>
           <Link
             href="/experience"
-            className={`text-base  ${
+            className={`text-lg  ${
               router.asPath === "/experience"
-                ? "text-gray-800 font-bold dark:text-gray-400"
+                ? "text-gray-800 font-bold dark:text-gray-500"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
@@ -106,7 +113,7 @@ export default function NavBar() {
             )}
           </Link>
         </div>
-
+            
           <button
             aria-label="Toggle Dark Mode"
             type="button"
@@ -139,7 +146,11 @@ export default function NavBar() {
               </svg>
             )}
           </button>
+
+
+
         </div>
       </div>
   );
+                
 }

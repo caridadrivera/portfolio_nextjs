@@ -3,7 +3,7 @@ import userData from "../constants/data"
 
 export default function About() {
   return (
-    <section className="bg-white dark:bg-gray-800">
+    <>
       <div className="bg-[#F1F1F1] -mt-10 dark:bg-gray-900">
         <div className="text-container max-w-6xl mx-auto pt-20">
           <p
@@ -116,6 +116,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

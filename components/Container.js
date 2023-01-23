@@ -6,6 +6,8 @@ import NavBar from "./NavBar";
 
 export default function Container({ children, ...customMeta }) {
   const router = useRouter();
+  
+
 
   const meta = {
     title: "Caridad Rivera - Developer, Critical Thinker, Poet",
@@ -30,12 +32,13 @@ export default function Container({ children, ...customMeta }) {
         />
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
+
         )}
+        
       </Head>
-      <main className="dark:bg-gray-800 w-full">
-        <NavBar />
-        <div>{children}</div>
-       
+      <NavBar/>
+      <main className="dark:bg-gray light:bg-white w-full ">
+        <div>{children}</div>   
       </main>
     </div>
   );
