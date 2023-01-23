@@ -43,18 +43,10 @@ export default function NavBar() {
       <div className="flex  md:flex-row sm:flex-row justify-between items-center">
     
         {!isMobile  && 
-           <nav className="space-x-8 hidden md:block">
-              {router.asPath !== "/" && 
-                 <Link href="/">
-                    <h1 className="font-semibold text-xl  dark:text-gray-100">
-                      {userData.name}
-                    </h1>
-                    <p className="text-base font-light dark:text-gray-300">
-                      {userData.designation}
-                     </p>
-                  </Link>
-                }
-  
+           <nav className="space-x-8 hidden md:block">             
+             <Link href="/">
+                 Home
+             </Link>
               <Link
                 href="/about"
                 className={`text-lg  ${
@@ -131,12 +123,12 @@ export default function NavBar() {
                       </svg>
                     )}
                   </Link>
-                </nav>
+          </nav>
             }
 
-        {isMobile && <button className="flex lg:hidden" onClick={()=> setOpen(!open)}>
-           <Hamburger />
-           {open  && <ul className="flex flex-col"> 
+      {isMobile && <button className="flex lg:hidden" 
+        onClick={()=> setOpen(!open)}> <Hamburger />
+       {open  && <ul className="flex flex-col"> 
          <Link href="/">
             Home
          </Link>

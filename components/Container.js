@@ -7,8 +7,6 @@ import NavBar from "./NavBar";
 export default function Container({ children, ...customMeta }) {
   const router = useRouter();
   
-
-
   const meta = {
     title: "Caridad Rivera - Developer, Critical Thinker, Poet",
     description: `I've been developing websites for 3 years. Get in touch with me to know more.`,
