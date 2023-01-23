@@ -44,16 +44,20 @@ export default function NavBar() {
     
         {!isMobile  && 
            <nav className="space-x-8 hidden md:block">
-             
-             <Link href="/">
+             <Link href="/"
+                  className={`text-lg  ${
+                  router.asPath === "/about"
+                  ? "text-gray-800 font-bold dark:text-gray-500"
+                  : "text-gray-600 dark:text-gray-300 font-normal "
+                   }`}>
                  Home
              </Link>
               <Link
                 href="/about"
                 className={`text-lg  ${
                 router.asPath === "/about"
-                 ? "text-gray-700 font-bold dark:text-gray-500"
-                 : "text-gray-900 font-bold dark:text-gray-300 font-normal "
+                ? "text-gray-800 font-bold dark:text-gray-500"
+                : "text-gray-600 dark:text-gray-300 font-normal "
                  }`} >
                   About{" "}
                     {router.asPath === "/about" && (
@@ -77,8 +81,8 @@ export default function NavBar() {
                     href="/projects"
                     className={`text-lg  ${
                       router.asPath === "/projects"
-                        ? "text-gray-900 font-bold dark:text-gray-500"
-                        : "text-black- font-bold dark:text-gray-300 font-normal "
+                      ? "text-gray-800 font-bold dark:text-gray-500"
+                      : "text-gray-600 dark:text-gray-300 font-normal "
                     }`}
                   >
                     Projects
