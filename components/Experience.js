@@ -18,7 +18,6 @@ export default function Experience() {
                 key={idx}
                 title={exp.title}
                 desc={exp.desc}
-                year={exp.year}
                 company={exp.company}
                 companyLink={exp.companyLink}
               />
