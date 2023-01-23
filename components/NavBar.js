@@ -43,7 +43,8 @@ export default function NavBar() {
       <div className="flex  md:flex-row sm:flex-row justify-between items-center">
     
         {!isMobile  && 
-           <nav className="space-x-8 hidden md:block">             
+           <nav className="space-x-8 hidden md:block">
+             
              <Link href="/">
                  Home
              </Link>

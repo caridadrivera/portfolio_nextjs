@@ -3,9 +3,9 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-20 text-center md:text-left">
+    <>
+      <div className="max-w-6xl mx-auto h-48 ">
+        <h1 className=" text-5xl dark:text-gray-800 md:text-8xl font-bold text-gray-500 my-20  dark:text-gray-600 text-center">
           Experience
         </h1>
       </div>
@@ -33,7 +33,7 @@ export default function Experience() {
           ))}
         </div>
       </div>
-    </section>
+      </>
   );
 }
 
