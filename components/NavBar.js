@@ -41,20 +41,20 @@ export default function NavBar() {
   return (
     <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
       <div className="flex  md:flex-row sm:flex-row justify-between items-center">
-        {!isMobile && router.asPath !== "/" && 
-          <div className="flex flex-col">
-            <Link href="/">
-                <h1 className="font-semibold text-xl  dark:text-gray-100">
-                  {userData.name}
-                </h1>
-                <p className="text-base font-light dark:text-gray-300">
-                  {userData.designation}
-                 </p>
-              </Link>
-          </div> }
     
         {!isMobile  && 
-            <div className="space-x-8 hidden md:block">
+           <nav className="space-x-8 hidden md:block">
+              {router.asPath !== "/" && 
+                 <Link href="/">
+                    <h1 className="font-semibold text-xl  dark:text-gray-100">
+                      {userData.name}
+                    </h1>
+                    <p className="text-base font-light dark:text-gray-300">
+                      {userData.designation}
+                     </p>
+                  </Link>
+                }
+  
               <Link
                 href="/about"
                 className={`text-lg  ${
@@ -131,12 +131,30 @@ export default function NavBar() {
                       </svg>
                     )}
                   </Link>
-                </div>
+                </nav>
             }
 
-        {isMobile && <Hamburger open={open} setOpen={setOpen} />}
+        {isMobile && <button className="flex lg:hidden" onClick={()=> setOpen(!open)}>
+           <Hamburger />
+           {open  && <ul className="flex flex-col"> 
+         <Link href="/">
+            Home
+         </Link>
+          <Link href="/about">
+            About
+          </Link>
+          <Link href="/projects">
+            Projects
+          </Link>
+          <Link href="/experience">
+             Experience
+           </Link>
+           </ul>}
+        </button>}
 
+  
 
+        
           <button
             aria-label="Toggle Dark Mode"
             type="button"
