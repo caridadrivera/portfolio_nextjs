@@ -20,23 +20,19 @@ export default function Main() {
               {userData.designation}
             </p>
         </div>
-        <RoughNotationGroup show={true}>
-          <RainbowHighlight color={colors[0]}>
+    
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
               Developer
             </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[1]}>
+       
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
               Critical Thinker
             </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[2]}>
+  
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
               Fast Learner
             </h1>
-          </RainbowHighlight>
-        </RoughNotationGroup>
+
       </div>
     </div>
   );

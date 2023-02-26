@@ -8,7 +8,7 @@ const userData = {
     address: "New York, NY",
     about: {
       title:
-        "I'm a software developer with a love for building web applications and building design to life",
+        "I'm a bilingual Software Engineer and fast learner with a track record of building responsive & intuitive web applications who loves poetry & beautiful designs.",
       description: [
         `I've been developing full-stack web applications since 2019 using multiple tech stacks`,
         `I consider myself a well-rounded, fast-learner currently looking for roles that challenge me but that also allow room for growth`,      
