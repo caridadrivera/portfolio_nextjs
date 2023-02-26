@@ -20,15 +20,15 @@ export default function Main() {
         </div>
     
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
-              Developer
+              Developer.
             </h1>
        
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
-              Critical Thinker
+              Critical Thinker.
             </h1>
   
             <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-500 my-2">
-              Fast Learner
+              Fast Learner.
             </h1>
 
       </div>
