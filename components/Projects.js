@@ -1,12 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import userData from "../constants/data"
+
 
 export default function Projects() {
   return (
-        <div className="flex flex-col md:flex-row justify-between items-center pt-40 mx-10 md:my-20 lg:my-0">
+        <div className="flex md:flex-row justify-around items-center pt-40 mx-10 md:my-20 lg:my-0">
           <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20  dark:text-gray-600 text-center">
-            Past and Present Projects
-          </h1>
+              Past and Present Projects
+           </h1>
+          <div className="grid grid-cols-2">
+             <img src={userData.memorieGameImg}/>
+             <img src={userData.mindfulApp}/>
+             <img src={userData.nycSpots}/>
+             <img src={userData.movieSearchApp}/>
+            <img src={userData.tictacToeGame}/>     
+          </div>
           <Link
             href="https://github.com/caridadrivera"
             className="mb-20 md:mb-0 px-8 py-4 rounded-md bg-white shadow-lg text-xl font-semibold flex flex-row space-x-4 items-center dark:text-gray-700"

@@ -3,6 +3,12 @@ const userData = {
     name: "Caridad Rivera",
     designation: "Full-Stack Developer",
     avatarUrl: "/profile.jpeg",
+    memorieGameImg: "/projectPhotos/memory.jpeg",
+    mindfulApp: "/projectPhotos/mindful.jpeg",
+    nycSpots: "/projectPhotos/nycSpots.jpeg",
+    movieSearchApp: "/projectPhotos/reactMovie.jpeg",
+    tictacToeGame: "/projectPhotos/tictoctoe.png",
+
     email: "devcaridad@gmail.com",
     phone: "347-372-0222",
     address: "New York, NY",
